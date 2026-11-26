@@ -48,6 +48,10 @@ section{padding-block:36px}
 footer{padding-top:28px;font-size:13px;color:var(--muted)}
 [dir=rtl] .eyebrow,[dir=rtl] .tag{letter-spacing:0}
 @media (prefers-reduced-motion:no-preference){.card{transition:transform .2s}.card:hover{transform:translateY(-2px)}}
+.cats{display:flex;flex-wrap:wrap;gap:10px}
+.cat{font:600 14px var(--body);padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none}
+.cat[aria-current=page]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.cat:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 </style>
 
 <div class="wrap">
@@ -68,6 +72,7 @@ footer{padding-top:28px;font-size:13px;color:var(--muted)}
 </div>
 
 <section id="samples">
+  <nav class="cats" aria-label="Portfolio categories" style="margin-bottom:24px"><a class="cat" href="index.html#samples" aria-current="page">Product videos</a><a class="cat" href="realestate.html">RealEstate Video tours</a></nav>
   <h2 data-k="h2a">Style samples</h2>
   <p class="sub" data-k="suba">Each one was made by us to show an approach. They are samples, not client work.</p>
   <div class="grid">

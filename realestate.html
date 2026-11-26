@@ -1,0 +1,111 @@
+<title>AdPulse Real Estate Tours</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;700&display=swap">
+<style>
+/* Layout: one calm column. Hero statement, three samples sized to their real video shape, three-step process, contact. */
+:root{
+  --bg:#EDF0F4; --surface:#FFFFFF; --ink:#12161D; --muted:#566070; --line:#D5DBE3; --accent:#2A3BFF; --accent-ink:#FFFFFF;
+  --display:'Bricolage Grotesque','Noto Sans Arabic',system-ui,sans-serif;
+  --body:'Inter','Noto Sans Arabic',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1218;--surface:#171C25;--ink:#EEF1F6;--muted:#9AA5B5;--line:#283040;--accent:#7F8CFF;--accent-ink:#0E1218;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1218;--surface:#171C25;--ink:#EEF1F6;--muted:#9AA5B5;--line:#283040;--accent:#7F8CFF;--accent-ink:#0E1218;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);padding-block:0 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:20px}
+.brand{font:700 18px/1 var(--display);letter-spacing:-.01em}
+.brand span{color:var(--accent)}
+.lang{font:500 14px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+.lang:focus-visible,.btn:focus-visible,video:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hero{padding-block:48px 40px;max-width:760px}
+.eyebrow{font:600 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font:700 clamp(34px,6.4vw,64px)/1.04 var(--display);letter-spacing:-.025em;margin:0 0 18px;text-wrap:balance}
+.lede{font-size:18px;color:var(--muted);margin:0 0 26px;max-width:60ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-block;font:600 15px var(--body);padding:13px 20px;border-radius:10px;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+h2{font:700 clamp(24px,3.6vw,34px)/1.15 var(--display);letter-spacing:-.015em;margin:0 0 8px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px;max-width:62ch}
+section{padding-block:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.card video{display:block;width:100%;height:auto;background:#000}
+.card .meta{padding:16px 18px 18px}
+.tag{display:inline-block;font:600 12px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.card h3{font:700 19px/1.25 var(--display);margin:0 0 6px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.note{margin:20px 0 0;font-size:14px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;padding:0;margin:0;list-style:none}
+.steps li{border-top:2px solid var(--ink);padding-top:14px}
+.steps b{display:block;font:700 18px var(--display);margin-bottom:4px}
+.steps span{color:var(--muted);font-size:15px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:26px 0 0;list-style:none}
+.facts li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-size:14px}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(22px,4vw,40px)}
+.mail{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 6px}
+.mail code{font:500 17px var(--body);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 14px;user-select:all;overflow-wrap:anywhere}
+.small{font-size:14px;color:var(--muted)}
+footer{padding-top:28px;font-size:13px;color:var(--muted)}
+[dir=rtl] .eyebrow,[dir=rtl] .tag{letter-spacing:0}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .2s}.card:hover{transform:translateY(-2px)}}
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0}
+.cat{font:600 14px var(--body);padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none}
+.cat[aria-current=page]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.cat:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.tours{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:20px;align-items:start}
+.fallback{display:inline-block;margin-top:10px;font:600 14px var(--body);color:var(--accent)}
+</style>
+<div class="wrap">
+<header>
+  <a class="brand" href="index.html" style="text-decoration:none;color:inherit">AdPulse <span>Visuals</span></a>
+  <a class="lang" href="index.html" style="text-decoration:none">All samples</a>
+</header>
+<main>
+<div class="hero">
+  <p class="eyebrow">RealEstate Video tours</p>
+  <h1>Property tours that move with the music.</h1>
+  <p class="lede">Cinematic walk-throughs built from listing photos, cut on the beat with a warm night grade. Send the photos of a property and we turn them into a tour for Reels, YouTube and your listing page.</p>
+  <div class="cta"><a class="btn" href="#contact">Get the details</a><a class="btn ghost" href="#tours">Watch the tours</a></div>
+</div>
+<section id="tours">
+  <h2>RealEstate Video tours</h2>
+  <p class="sub">Both tours are style samples that we made ourselves, from stock and AI-generated villa images. They are not client work and the property is a concept.</p>
+  <nav class="cats" aria-label="Portfolio categories"><a class="cat" href="index.html#samples">Product videos</a><a class="cat" href="realestate.html" aria-current="page">RealEstate Video tours</a></nav>
+  <div class="tours" style="margin-top:24px">
+    <article class="card">
+      <video controls playsinline preload="metadata" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3H3Zro2fgiFnxaLcbfJ7ZbNvXhq/a5b2780a-2bc0-4a95-a3bf-8d2dd373702e.mp4#t=0.5" aria-label="Modern villa tour sample" style="aspect-ratio:16/9"></video>
+      <div class="meta"><span class="tag">Sample · 36 sec · 16:9</span><h3>Modern villa, luxury walk-through</h3><p>A smooth day-to-evening tour of a modern villa with a warm cinematic grade and a luxury soundtrack.</p><a class="fallback" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3H3Zro2fgiFnxaLcbfJ7ZbNvXhq/a5b2780a-2bc0-4a95-a3bf-8d2dd373702e.mp4" target="_blank" rel="noopener">Open the video in a new tab</a></div>
+    </article>
+    <article class="card">
+      <video controls playsinline preload="metadata" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3H3Zro2fgiFnxaLcbfJ7ZbNvXhq/585a3ef6-406b-4d8c-9a44-1ecc6c4336f2.mp4#t=0.5" aria-label="Night villa beat-matched tour sample" style="aspect-ratio:16/9"></video>
+      <div class="meta"><span class="tag">Sample · 36 sec · 16:9</span><h3>Night villa, beat-matched tour</h3><p>Fourteen rooms cut to a 120 BPM track, with a drop at 16 seconds and room labels on every shot.</p><a class="fallback" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3H3Zro2fgiFnxaLcbfJ7ZbNvXhq/585a3ef6-406b-4d8c-9a44-1ecc6c4336f2.mp4" target="_blank" rel="noopener">Open the video in a new tab</a></div>
+    </article>
+  </div>
+</section>
+<section>
+  <h2>What you get</h2>
+  <p class="sub">One property, one finished tour.</p>
+  <ul class="facts"><li>MP4, 1080p, 16:9</li><li>Music cut to the picture</li><li>Room labels in your language</li><li>Vertical cut for Reels on request</li></ul>
+</section>
+<section id="contact">
+  <div class="contact">
+    <h2>Want the details and prices?</h2>
+    <p class="sub" style="margin-bottom:0">Write to us with the property photos or a listing link, and we will reply with the options, timing and prices.</p>
+    <div class="mail"><code id="email">elhedoudy@adpulsevisuals.com</code><button class="btn ghost" id="copy" type="button">Copy email</button></div>
+    <p class="small">Instagram: <a href="https://www.instagram.com/adpulsevisuals/" target="_blank" rel="noopener">@adpulsevisuals</a></p>
+    <p class="small">WhatsApp: <a href="https://wa.me/201279617677" target="_blank" rel="noopener" dir="ltr">+20 127 961 7677</a></p>
+    <p class="small">Prefer not to hear from us? Reply STOP and we will not message again.</p>
+  </div>
+</section>
+</main>
+<footer>AdPulse Visuals · Eyad Elhedoudy, founder</footer>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('email').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email';},1600);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,sel);}else{sel();}
+});
+</script>
